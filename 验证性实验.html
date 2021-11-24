@@ -1227,16 +1227,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 时间：通信用时</em></p>
 <h4 id="实作二">实作二</h4>
 <p>使用 <code>ping/?</code> 命令了解该命令的各种选项并实际使用。</p>
-<p><img src="file:///d:\MD\验证性实验\png\3.png" alt="图3" title="图3"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/3.png" alt="图3" title="图3"></p>
 <p><a href="#%E9%AA%8C%E8%AF%81%E6%80%A7%E5%AE%9E%E9%AA%8C">回到顶部</a></p>
 <h2 id="tracert">tracert</h2>
 <h4 id="实作一-2">实作一</h4>
 <p>要了解到某计算机如 <a href="http://www.baidu.com">www.baidu.com</a> 中间经过了哪些节点（路由器）及其它状态，可使用 <code>tracert www.baidu.com</code> 命令，查看反馈的信息，了解节点的个数。</p>
-<p><img src="file:///d:\MD\验证性实验\png\4.png" alt="图4" title="图4"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/4.png" alt="图4" title="图4"></p>
 <p>可通过网站 <a href="http://ip.cn">http://ip.cn</a> 查看这些节点位于何处，是哪个公司的，大致清楚本机到百度服务器之间的路径。</p>
-<p><img src="file:///d:\MD\验证性实验\png\5.png" alt="图5" title="图5"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/5.png" alt="图5" title="图5"></p>
 <p><a href="http://ping.pe">ping.pe</a> 这个网站可以探测从全球主要的 ISP 到某站点如 <a href="https://qige.io">https://qige.io</a> 的线路状态，当然也包括各线路到该主机的路由情况。请使用浏览器访问 <a href="http://ping.pe/qige.io">http://ping.pe/qige.io</a> 进行了解。</p>
-<p><img src="file:///d:\MD\验证性实验\png\6.png" alt="图6" title="图6"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/6.png" alt="图6" title="图6"></p>
 <blockquote>
 <p>问题</p>
 <p>tracert 能告诉我们路径上的节点以及大致的延迟等信息，那么它背后的原理是什么？</p>
@@ -1256,16 +1256,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <h2 id="arp">ARP</h2>
 <h4 id="实作一-3">实作一</h4>
 <p>运行 <code>arp -a</code> 命令查看当前的 arp 缓存， 请留意缓存了些什么。</p>
-<p><img src="file:///d:\MD\验证性实验\png\7.png" alt="图7" title="图7"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/7.png" alt="图7" title="图7"></p>
 <p>然后 <code>ping</code> 一下你旁边的计算机 IP（注意，需保证该计算机的 IP 没有出现在 arp 缓存中，或者使用 <code>arp -d *</code> 先删除全部缓存），再次查看缓存，你会发现一些改变，请作出解释。
 <em>arp缓存表中增加了其的IP地址，因为ping通后就将其ip地址缓存下来方便之后的使用（不用每次进行地址解析）。</em></p>
 <h4 id="实作二-1">实作二</h4>
 <p>请使用 <code>arp /?</code> 命令了解该命令的各种选项。</p>
-<p><img src="file:///d:\MD\验证性实验\png\8.png" alt="图8" title="图8"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/8.png" alt="图8" title="图8"></p>
 <h4 id="实作三">实作三</h4>
 <p>一般而言，arp 缓存里常常会有网关的缓存，并且是动态类型的。</p>
 <p>假设当前网关的 IP 地址是 10.160.255.254，MAC 地址是 00-74-9c-9f-40-13，请使用 <code>arp -s 10.160.255.254 00-74-9c-9f-40-13</code> 命令设置其为静态类型的。</p>
-<p><img src="file:///d:\MD\验证性实验\png\9.png" alt="图9" title="图9"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/9.png" alt="图9" title="图9"></p>
 <blockquote>
 <p>问题</p>
 <p>在实作三中，为何缓存中常常有网关的信息？
@@ -1279,8 +1279,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <h2 id="dhcp">DHCP</h2>
 <h4 id="实作一-4">实作一</h4>
 <p>一般地，我们自动获取的网络配置信息包括：IP 地址、子网掩码、网关 IP 以及 DNS 服务器 IP 等。使用 <code>ipconfig/release</code> 命令释放自动获取的网络配置，并用 <code>ipconfig/renew</code> 命令重新获取，了解 DHCP 工作过程和原理。</p>
-<p><img src="file:///d:\MD\验证性实验\png\10.png" alt="图10" title="图10">
-<img src="file:///d:\MD\验证性实验\png\11.png" alt="图11" title="图11"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/10.png" alt="图10" title="图10">
+<img src="https://githubgodfather.github.io/ComputerNetwork1/png/11.png" alt="图11" title="图11"></p>
 <blockquote>
 <p>问题</p>
 <p>在Windows系统下，如果由于某种原因计算机不能获取 DHCP 服务器的配置数据，那么Windows将会根据某种算法自动配置为 169.254.x.x 这样的 IP 地址。显然，这样的 IP 以及相关的配置信息是不能让我们真正接入 Internet 的，为什么？既然不能接入 Internet，那么Winodws系统采用这样的方案有什么意义？</p>
@@ -1292,22 +1292,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <h2 id="netstat">netstat</h2>
 <h4 id="实作一-5">实作一</h4>
 <p>Windows 系统将一些常用的端口与服务记录在 <code>C:\WINDOWS\system32\drivers\etc\services</code> 文件中，请查看该文件了解常用的端口号分配。</p>
-<p><img src="file:///d:\MD\验证性实验\png\12.png" alt="图12" title="图12"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/12.png" alt="图12" title="图12"></p>
 <h4 id="实作二-2">实作二</h4>
 <p>使用 <code>netstat -an</code> 命令，查看计算机当前的网络连接状况。</p>
-<p><img src="file:///d:\MD\验证性实验\png\13.png" alt="图13" title="图13"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/13.png" alt="图13" title="图13"></p>
 <p><a href="#%E9%AA%8C%E8%AF%81%E6%80%A7%E5%AE%9E%E9%AA%8C">回到顶部</a></p>
 <h2 id="dns">DNS</h2>
 <h4 id="实作一-6">实作一</h4>
 <p>Windows 系统将一些固定的/静态的 DNS 信息记录在 <code>C:\WINDOWS\system32\drivers\etc\hosts</code> 文件中，如我们常用的 localhost 就对应 127.0.0.1 。请查看该文件看看有什么记录在该文件中。</p>
-<p><img src="file:///d:\MD\验证性实验\png\14.png" alt="图14" title="图14"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/14.png" alt="图14" title="图14"></p>
 <p>无内容</p>
 <h4 id="实作二-3">实作二</h4>
 <p>解析过的 DNS 记录将会被缓存，以利于加快解析速度。请使用 <code>ipconfig /displaydns</code> 命令查看。我们也可以使用 <code>ipconfig /flushdns</code> 命令来清除所有的 DNS 缓存。</p>
-<p><img src="file:///d:\MD\验证性实验\png\15.png" alt="图15" title="图15"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/15.png" alt="图15" title="图15"></p>
 <h4 id="实作三-1">实作三</h4>
 <p>使用 <code>nslookup qige.io</code> 命令，将使用默认的 DNS 服务器查询该域名。当然你也可以指定使用 CloudFlare（1.1.1.1）或 Google（8.8.8.8） 的全球 DNS 服务器来解析，如：<code>nslookup qige.io 8.8.8.8</code>，当然，由于你懂的原因，这不一定会得到正确的答案。</p>
-<p><img src="file:///d:\MD\验证性实验\png\16.png" alt="图16" title="图16"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/16.png" alt="图16" title="图16"></p>
 <blockquote>
 <p>问题</p>
 <p>上面秘籍中我们提到了使用插件或自己修改 hosts 文件来屏蔽广告，思考一下这种方式为何能过滤广告？如果某些广告拦截失效，那么是什么原因？你应该怎样进行分析从而能够成功屏蔽它？</p>
@@ -1319,10 +1319,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <h2 id="cache">cache</h2>
 <h4 id="实作一-7">实作一</h4>
 <p>打开 Edge 浏览器，访问 <a href="https://qige.io">https://qige.io</a> ，接下来敲 <code>F12</code> 键 或 <code>Ctrl + Shift + I</code> 组合键打开开发者工具，选择 Network 面板后刷新页面，你会在开发者工具底部看到加载该页面花费的时间。请进一步查看哪些文件被 cache了，哪些没有。</p>
-<p><img src="file:///d:\MD\验证性实验\png\17.png" alt="图17" title="图17"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/17.png" alt="图17" title="图17"></p>
 <h4 id="实作二-4">实作二</h4>
 <p>接下来仍在 Network 面板，选择 Disable cache 选项框，表明当前不使用 cache，页面数据全部来自于 Internet，刷新页面，再次在开发者工具底部查看加载该页面花费的时间。你可比对与有 cache 时的加载速度差异。</p>
-<p><img src="file:///d:\MD\验证性实验\png\18.png" alt="图18" title="图18"></p>
+<p><img src="https://githubgodfather.github.io/ComputerNetwork1/png/18.png" alt="图18" title="图18"></p>
 <p>不使用cache缓存加载速度变慢了。</p>
 <p><a href="#%E9%AA%8C%E8%AF%81%E6%80%A7%E5%AE%9E%E9%AA%8C">回到顶部</a></p>
 
